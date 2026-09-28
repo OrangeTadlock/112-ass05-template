@@ -1,4 +1,4 @@
-//char *AUTHOR_NAME        = (char *) "Your Name";
+//char *AUTHOR_NAME        = (char *) "Brayden Tadlock";
 //char *AUTHOR_AUTHORSHIP  = (char *) "I acknowledge that I have worked on this
 // assignment independently, except where explicitly noted and referenced.
 // Any collaboration or use of external resources has been properly cited.
@@ -16,8 +16,8 @@
  * 
  * Write your function implementations below each TODO.
  */
-
-
+#include "code.h"
+#include <stdio.h>
 
 /*
  * ============================================================================
@@ -29,7 +29,17 @@
  */
 int find_max(int arr[], int n)
 {
-    // TODO: Your implementation here
+    for(int i = 0; i < n; i++)
+    {
+        int comp = arr[0];
+        if (arr[i] > comp)
+            {
+                comp = arr[i];
+                return comp;
+            }
+        else 
+            return comp;
+    }
 }
 
 /*
@@ -43,6 +53,20 @@ int find_max(int arr[], int n)
 int find_min(int arr[], int n)
 {
     // TODO: Your implementation here
+    for(int i = 0; i < n; i++)
+    {
+        int comp = arr[0];
+        if (arr[i] > comp)
+            {
+                return comp;
+            }
+        
+        else 
+            {
+                comp = arr[i];
+                return comp;
+            }
+    }
 }
 
 /*
@@ -56,6 +80,12 @@ int find_min(int arr[], int n)
 long sum_array(int arr[], int n)
 {
     // TODO: Your implementation here
+    for(int i = 0; i < n; i++)
+    {
+        int sum = 0;
+        sum = sum + arr[i];
+        return sum;
+    }
 }
 
 /*
