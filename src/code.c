@@ -29,17 +29,15 @@
  */
 int find_max(int arr[], int n)
 {
+    int comp = arr[0];
     for(int i = 0; i < n; i++)
     {
-        int comp = arr[0];
         if (arr[i] > comp)
             {
                 comp = arr[i];
-                return comp;
             }
-        else 
-            return comp;
     }
+    return comp;
 }
 
 /*
@@ -53,20 +51,15 @@ int find_max(int arr[], int n)
 int find_min(int arr[], int n)
 {
     // TODO: Your implementation here
+    int comp = arr[0];
     for(int i = 0; i < n; i++)
     {
-        int comp = arr[0];
-        if (arr[i] > comp)
-            {
-                return comp;
-            }
-        
-        else 
+        if (arr[i] < comp)
             {
                 comp = arr[i];
-                return comp;
             }
     }
+    return comp;
 }
 
 /*
@@ -80,12 +73,12 @@ int find_min(int arr[], int n)
 long sum_array(int arr[], int n)
 {
     // TODO: Your implementation here
+    long sum = 0;
     for(int i = 0; i < n; i++)
     {
-        int sum = 0;
         sum = sum + arr[i];
-        return sum;
     }
+    return sum;
 }
 
 /*
@@ -99,6 +92,14 @@ long sum_array(int arr[], int n)
 double average(float arr[], int n)
 {
     // TODO: Your implementation here
+    double sum = 0;
+    double avg = 0;
+    for(int i = 0; i < n; i++)
+    {
+        sum = sum + arr[i];
+        avg = sum / n;
+    }
+    return avg;
 }
 
 /*
@@ -119,6 +120,16 @@ double average(float arr[], int n)
 int linear_search(int arr[], int n, int target)
 {
     // TODO: Your implementation here
+    int i = 0;
+    while (i < n)
+    {
+        if (arr[i] == target)
+        {
+            return i;
+        }
+        i++;
+    }
+    return -1;
 }
 
 
@@ -138,4 +149,15 @@ int linear_search(int arr[], int n, int target)
 double heron(double x, double epsilon)
 {
     // TODO: Your implementation here
+    double diff = 0;
+    double guess = x / 2;
+    double div = 0;
+    while (diff > epsilon)
+    {
+        div = x / guess;
+        guess = (guess + div) / 2;
+        diff = guess - div;
+
+    }
+    return guess;
 }
