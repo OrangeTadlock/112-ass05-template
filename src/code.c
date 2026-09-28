@@ -149,14 +149,15 @@ int linear_search(int arr[], int n, int target)
 double heron(double x, double epsilon)
 {
     // TODO: Your implementation here
-    double diff = 0;
-    double guess = x / 2;
+    double diff = 1;
+    double two = 2;
+    double guess = x / two;
     double div = 0;
     while (diff > epsilon)
     {
         div = x / guess;
-        guess = (guess + div) / 2;
-        diff = guess - div;
+        guess = (guess + div) / two;
+        diff = div - guess;
 
     }
     return guess;
