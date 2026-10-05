@@ -13,7 +13,6 @@
 
 int main(void)
 {
-    
     int arr[] = {5, 2, 8, 1, 9};
     printf("Max: %d\n", find_max(arr, 5));
     printf("Min: %d\n", find_min(arr, 5));
@@ -29,4 +28,5 @@ int main(void)
     printf("Square root of 2: %f\n", heron(2.0, 0.0001));
     
     return 0;
+
 }
