@@ -152,12 +152,18 @@ double heron(double x, double epsilon)
     double diff = 1;
     double two = 2;
     double guess = x / two;
-    double div = 0;
+    double div = x / guess;
+    double prev_guess = guess;
     while (diff > epsilon)
     {
+        prev_guess = guess;
         div = x / guess;
         guess = (guess + div) / two;
-        diff = div - guess;
+        diff = guess - prev_guess;
+        if (diff < 0)
+        {
+            diff = -diff;
+        }
 
     }
     return guess;
