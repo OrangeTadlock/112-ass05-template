@@ -13,6 +13,7 @@
 
 int main(void)
 {
+    
     int arr[] = {5, 2, 8, 1, 9};
     printf("Max: %d\n", find_max(arr, 5));
     printf("Min: %d\n", find_min(arr, 5));
